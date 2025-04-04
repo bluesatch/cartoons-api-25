@@ -1,0 +1,59 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="singleMain">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <img src="<%= data.image %>" alt="<%= data.title %>" class="img-fluid w-75">
+            </div>
+            <div class="col-5">
+                <nav class="navigation">
+                    <ul class="pagination">
+                        <% if (data.id > 1) { %>
+                            <li class="page-item">
+                                <a href="/cartoons2d/<%= data.id - 1 %>" class="page-link">Previous</a>
+                            </li>
+                        <% } %>
+                        <% if (data.id < count) { %>
+                            <li class="page-item">
+                                <a href="/cartoons2d/<%= data.id + 1 %>" class="page-link">Next</a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </nav>
+                <ul class="stat-list list-group list-group-flush">
+                    <li class="list-item">
+                        Year Created: <%= data.year %>
+                    </li>
+                    <li class="list-item">
+                        Total Episodes: <%= data.episodes %>
+                    </li>
+                    <li class="list-item">
+                        Runtime: <%= data.runtime %>
+                    </li>
+                    <li class="list-item">
+                        Genre:
+                        <ul class="genre-list">
+                            <% data.genre.forEach(genre => { %>
+                                <li class="genre-item"><%= genre %></li>
+                            <% }) %>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        Creator(s):
+                        <ul class="genre-list">
+                            <% data.creator.forEach(creator => { %>
+                                <li class="creator-item"><%= creator %></li>
+                            <% }) %>
+                        </ul>
+                    </li>
+                    <li class="list-item">
+                        Rating: <%= data.rating %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

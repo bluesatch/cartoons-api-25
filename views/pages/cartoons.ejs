@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="2DMain">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+            <% data.forEach(cartoon => { %>
+                <!-- html is gonna go -->
+                <div class="col">
+                    <div class="card h-100">
+                        <header class="card-header">
+                            <h2 class="card-title">
+                                <%= cartoon.title %>
+                            </h2>
+                        </header>
+                        <img src="<%= cartoon.image %>" alt="<%= cartoon.title %>" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Year created: <%= cartoon.year %></p>
+                            <p class="card-text">Creator(s):</p>
+                            <ul class="list-unstyled creators-list">
+                                <% cartoon.creator.forEach(item => { %>
+                                    <li class="list-item"><%= item %></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/cartoons2d/<%= cartoon.id %>" class="card-footer-link">view more</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

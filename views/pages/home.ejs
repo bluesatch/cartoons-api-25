@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+    <main class="main" id="homeMain">
+        <div class="container">
+            <figure class="figure">
+                <img src="<%= cartoon.image %>" alt="<%= cartoon.title %> " class="figure-img img-fluid w-50 home-img">
+                <figcaption class="figure-caption">
+                    <a href="/cartoons2d/<%= cartoon.id %>" class="cartoon-link">
+                        <%= cartoon.title %>
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+
+<%- include('../partials/footer') %>
+
