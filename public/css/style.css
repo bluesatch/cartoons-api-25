@@ -1,0 +1,54 @@
+* { box-sizing: border-box;}
+
+:root {
+    --font1: "Luckiest Guy", cursive;
+    --font2: "Funnel Display", sans-serif;
+    --prim: #3a86ff;
+    --sec: #8338ec;
+    --tert: #ffbe0b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eaeae3;
+}
+
+.cartoon-link, .site-link,.top-nav-link {
+    color: var(--sec);
+    font-style: italic;
+}
+
+.cartoon-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cartoon-title {
+    color: var(--sec);
+    font-family: var(--font2);
+    font-size: 18px;
+}
+
+.header, .footer {
+    padding: 20px 0;
+}
+
+.home-heading {
+    color: var(--prim);
+    font-family: var(--font1);
+    font-weight: 200;
+
+}
+
+.home-img {
+    width: 315px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--tert);
+}
+
+.main {
+    padding: 80px 0;
+}
+
+

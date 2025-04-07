@@ -7,6 +7,9 @@ router.use(express.static('public'))
 const twoDRoutes = require('./api/2dRoutes')
 router.use('/cartoons2d', twoDRoutes)
 
+const threeDRoutes = require('./api/3dRoutes')
+router.use('/cartoons3d', threeDRoutes)
+
 // home page
 router.get('/', (req, res)=> {
     let randomCartoon

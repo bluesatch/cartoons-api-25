@@ -11,12 +11,12 @@
                     <ul class="pagination">
                         <% if (data.id > 1) { %>
                             <li class="page-item">
-                                <a href="/cartoons2d/<%= data.id - 1 %>" class="page-link">Previous</a>
+                                <a href="/<%= path %>/<%= data.id - 1 %>" class="page-link">Previous</a>
                             </li>
                         <% } %>
                         <% if (data.id < count) { %>
                             <li class="page-item">
-                                <a href="/cartoons2d/<%= data.id + 1 %>" class="page-link">Next</a>
+                                <a href="/<%= path %>/<%= data.id + 1 %>" class="page-link">Next</a>
                             </li>
                         <% } %>
                     </ul>

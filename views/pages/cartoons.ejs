@@ -8,14 +8,14 @@
                 <div class="col">
                     <div class="card h-100">
                         <header class="card-header">
-                            <h2 class="card-title">
+                            <h2 class="card-title cartoon-title">
                                 <%= cartoon.title %>
                             </h2>
                         </header>
-                        <img src="<%= cartoon.image %>" alt="<%= cartoon.title %>" class="card-img-top">
+                        <img src="<%= cartoon.image %>" alt="<%= cartoon.title %>" class="card-img-top img-fluid cartoon-image">
                         <div class="card-body">
-                            <p class="card-text">Year created: <%= cartoon.year %></p>
-                            <p class="card-text">Creator(s):</p>
+                            <p class="card-text cartoon-text">Year created: <%= cartoon.year %></p>
+                            <p class="card-text cartoon-text">Creator(s):</p>
                             <ul class="list-unstyled creators-list">
                                 <% cartoon.creator.forEach(item => { %>
                                     <li class="list-item"><%= item %></li>
@@ -23,7 +23,7 @@
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="/cartoons2d/<%= cartoon.id %>" class="card-footer-link">view more</a>
+                            <a href="/<%= path %>/<%= cartoon.id %>" class="card-footer-link">view more</a>
                         </div>
                     </div>
                 </div>

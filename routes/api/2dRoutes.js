@@ -18,7 +18,8 @@ router.get('/', (req, res)=> {
         res.render('pages/cartoons', {
             title: '2D Cartoons',
             name: '2D Cartoons',
-            data: response.data
+            data: response.data,
+            path: 'cartoons2d'
         })
     })
 })
@@ -37,6 +38,7 @@ router.get('/:id', (req, res)=> {
             title: data.title,
             name: data.title,
             data: data,
+            path: 'cartoons2d',
             count
         })
     })

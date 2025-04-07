@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     <title><%= title %></title>
 </head>
 <body>
@@ -11,13 +15,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1 class="text-capitalize"><%= name %></h1>
+                    <h1 class="text-capitalize home-heading"><%= name %></h1>
                 </div>
                 <div class="col-md-5">
                     <nav class="nav justify-content-around justify-content-md-end top-nav">
-                        <a href="/" class="nav-link">Home</a>
-                        <a href="/cartoons2d" class="nav-link">2D Cartoons</a>
-                        <a href="#" class="nav-link">3D Cartoons</a>
+                        <a href="/" class="nav-link top-nav-link">Home!</a>
+                        <a href="/cartoons2d" class="nav-link top-nav-link">2D Cartoons!</a>
+                        <a href="/cartoons3d" class="nav-link top-nav-link">3D Cartoons!</a>
                     </nav>
                 </div>
             </div>
